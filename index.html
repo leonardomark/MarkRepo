@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Harry Potter Dictionary</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+	
+	
+	$(".links").hover(function(e){
+		$(this).animate({
+			"margin-left":-8
+		});
+	}, function(e){
+		$(this).animate({
+			"margin-left":-150
+		});
+		
+		
+	});
+	
+	$("#link1").click(function(){
+				
+		$("#loadedPage").load("homepage.txt");
+		$("#image").attr('src', "");
+		
+	});
+	
+	$("#link2").click(function(){
+		$.get("get_post.php", {menu:1, menu_item:0}, function(resp){
+			var img = ($.parseJSON(resp));
+			$("#image").attr('src', img);
+		});
+		
+		$("#loadedPage").load("harrypotter.txt");
+		
+	});
+	
+	$("#link3").click(function(){
+		$.get("get_post.php", {menu:1, menu_item:1}, function(resp){
+			var img = ($.parseJSON(resp));
+			$("#image").attr('src', img);
+		});
+		
+		$("#loadedPage").load("ronweasley.txt");
+		
+	});
+	
+	$("#link4").click(function(){
+		$.get("get_post.php", {menu:1, menu_item:2}, function(resp){
+			var img = ($.parseJSON(resp));
+			$("#image").attr('src', img);
+		});
+		
+		$("#loadedPage").load("hermionegranger.txt");
+		
+	});
+	
+	$("#link5").click(function(){
+		$.get("get_post.php", {menu:2, menu_item:0}, function(resp){
+			var img = ($.parseJSON(resp));
+			$("#image").attr('src', img);
+		});
+		
+		$("#loadedPage").load("albusdumbledore.txt");
+		
+	});
+	
+	$("#link6").click(function(){
+		$.get("get_post.php", {menu:2, menu_item:1}, function(resp){
+			var img = ($.parseJSON(resp));
+			$("#image").attr('src', img);
+		});
+		
+		$("#loadedPage").load("severussnape.txt");
+		
+	});
+	$("#link7").click(function(){
+		$.get("get_post.php", {menu:2, menu_item:2}, function(resp){
+			var img = ($.parseJSON(resp));
+			$("#image").attr('src', img);
+		});
+		
+		$("#loadedPage").load("lordvoldemort.txt");
+		
+	});
+	
+	//$("#link8").click(function(){
+		//$.get("get_post.php", {menu:2, menu_item:2}, function(resp){
+		//	alert(resp);
+		//});
+		
+	//});
+	
+});
+
+
+</script>
+
+<style type = "text/css">
+	body{
+		font-size:18px;	
+		background-color:#110F1F;
+		font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+		background-image:url(hpbg.jpg);
+	}
+	
+	#main{
+		margin-left:200px;
+		margin-top:-320px;
+		text-align:left;	
+		max-width:1200px;
+	}
+	
+	#loadedPage{
+		color:#C49644;
+	}
+	
+	#header{
+		height:100px;	
+		padding-bottom:80px;
+		margin-left:-8px;
+		text-align:center;
+	}
+	
+	.links{
+		width:170px;
+		padding:10px;
+		margin:5px;
+		margin-left:-150px;
+		background-color:#183758;
+		text-align:center;
+		border-radius:10px;
+		color:#C49644;
+	}
+	
+	.links:hover{
+		font-weight:700;
+	}
+	
+</style>
+
+
+</head>
+
+<body>
+	
+    <div id="header">
+    	<img src="hplogo.png" />
+    </div>
+
+	<div id="sidebar">
+    	<div id="link1" class="links">Home</div>
+        <div id="link2" class="links">Harry Potter</div>
+        <div id="link3" class="links">Ron Weasley</div>
+        <div id="link4" class="links">Hermione Granger</div>
+        <div id="link5" class="links">Albus Dumbledore</div>
+        <div id="link6" class="links">Severus Snape</div>
+        <div id="link7" class="links">Lord Voldemort</div>
+    </div>
+    
+   
+    
+    <table id="main" cellpading="30">
+    	<tr>
+        	<td><span id="loadedPage">Harry Potter is a series of seven fantasy novels written by the British author J. K. Rowling. The series, named after the titular character, chronicle the adventures of a wizard, Harry Potter, and his friends Ronald Weasley and Hermione Granger, all of whom are students at Hogwarts School of Witchcraft and Wizardry. The main story arc concerns Harry's quest to overcome the Dark wizard Lord Voldemort, who aims to become immortal, conquer the wizarding world, subjugate non-magical people, and destroy all those who stand in his way, especially Harry Potter.
+Since the release of the first novel, Harry Potter and the Philosopher's Stone, on 30 June 1997, the books have gained immense popularity, critical acclaim and commercial success worldwide. The series has also had some share of criticism, including concern for the increasingly dark tone. As of June 2011, the book series has sold about 450 million copies, making it the best-selling book series in history, and has been translated into 67 languages. The last four books consecutively set records as the fastest-selling books in history.
+A series of many genres, including fantasy, coming of age, and the British school story (with elements of mystery, thriller, adventure, and romance), it has many cultural meanings and references. According to Rowling, the main theme is death. There are also many other themes in the series, such as prejudice and corruption. 
+The series was originally printed in English by two major publishers, Bloomsbury in the United Kingdom and Scholastic Press in the United States. The books have since been published by many publishers worldwide. The books, with the seventh book split into two parts, have been made into an eight-part film series by Warner Bros. Pictures, the highest-grossing film series of all time. The series also originated much tie-in merchandise, making the Harry Potter brand worth in excess of $15 billion.  Thanks to the success of the books and films, Harry Potter has also been used for a theme park, The Wizarding World of Harry Potter in Universal Parks & Resorts' Islands of Adventure.
+</span></td>
+            <td><img id="image" src=" " /></td>
+        </tr>
+    
+    </table>
+    
+
+
+
+</body>
+</html>
